@@ -7,6 +7,7 @@ mod classification;
 mod cloud;
 mod error;
 mod filter;
+mod geostatistics;
 mod interpolation;
 mod io;
 mod normals;
@@ -16,6 +17,10 @@ pub use classification::Classification;
 pub use cloud::{Point3, PointCloud};
 pub use error::Error;
 pub use filter::{ground_filter_simple, thin_random, thin_voxel};
+pub use geostatistics::{
+    Variogram, VariogramBin, VariogramModel, empirical_variogram, getis_ord_gi_star, morans_i,
+    ordinary_kriging,
+};
 pub use interpolation::{InterpolatedGrid, idw_interpolation, statistical_outlier_removal};
 pub use io::{CloudStats, LasHeader, read_las, write_las};
 pub use normals::estimate_normals;
